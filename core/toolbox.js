@@ -694,6 +694,7 @@ Blockly.Toolbox.Category.prototype.createDom = function() {
   this.label_ = goog.dom.createDom('div',
       {'class': 'scratchCategoryMenuItemLabel'},
       Blockly.utils.replaceMessageReferences(this.name_));
+
   if (this.iconURI_) {
     this.bubble_ = goog.dom.createDom('div',
         {'class': 'scratchCategoryItemIcon'});
@@ -703,6 +704,28 @@ Blockly.Toolbox.Category.prototype.createDom = function() {
         {'class': 'scratchCategoryItemBubble'});
     this.bubble_.style.backgroundColor = this.colour_;
     this.bubble_.style.borderColor = this.secondaryColour_;
+  }
+  if (this.id_.indexOf('arduino') >= 0) {
+    this.docsLink_ = goog.dom.createDom('a',
+        {
+
+          'class': 'scratchCategoryMenuItemDocs',
+          'target': '_blank',
+          'href': 'https://labs.arduino.cc/en/labs/include-robot'
+        },
+        '?'
+    );
+
+    this.docsLink_.style.display = 'block';
+    this.docsLink_.style.float = 'right';
+    this.docsLink_.style.backgroundColor = '#008184';
+    this.docsLink_.style.borderRadius = '50%';
+    this.docsLink_.style.color = 'white';
+    this.docsLink_.style.padding = '1px';
+    this.docsLink_.style.width = '14px';
+    this.docsLink_.style.textDecoration = 'none';
+
+    this.item_.appendChild(this.docsLink_);
   }
   this.item_.appendChild(this.bubble_);
   this.item_.appendChild(this.label_);
