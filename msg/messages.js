@@ -147,6 +147,7 @@ Blockly.Msg.MOTION_TURNRIGHT = 'turn %1 %2 degrees';
 Blockly.Msg.MOTION_POINTINDIRECTION = 'point in direction %1';
 Blockly.Msg.MOTION_POINTTOWARDS = 'point towards %1';
 Blockly.Msg.MOTION_POINTTOWARDS_POINTER = 'mouse-pointer';
+Blockly.Msg.MOTION_POINTTOWARDS_RANDOM = 'random direction';
 Blockly.Msg.MOTION_GOTO = 'go to %1';
 Blockly.Msg.MOTION_GOTO_POINTER = 'mouse-pointer';
 Blockly.Msg.MOTION_GOTO_RANDOM = 'random position';
@@ -330,6 +331,7 @@ Blockly.Msg.DELETE_VARIABLE = 'Delete the "%1" variable';
 Blockly.Msg.NEW_PROCEDURE = 'Make a Block';
 Blockly.Msg.PROCEDURE_ALREADY_EXISTS = 'A procedure named "%1" already exists.';
 Blockly.Msg.PROCEDURE_DEFAULT_NAME = 'block name';
+Blockly.Msg.PROCEDURE_USED = 'To delete a block definition, first remove all uses of the block';
 
 // Lists
 // @todo Remove these once fully managed by Scratch VM / Scratch GUI
